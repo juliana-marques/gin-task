@@ -21,7 +21,7 @@ def exibir_imagem():
             random_index = random.randint(0, len(items) - 1)
             random_item = items[random_index]
             image_url = random_item['link']
-            return f'<img src="{image_url}" alt="Imagem" style="max-width: 300px; max-height: 300px; margin: auto;"> + Hello Cats!'
+            return f'<img src="{image_url}" alt="Imagem" style="max-width: 300px; max-height: 300px; margin: auto;">'
 
 
         else:
