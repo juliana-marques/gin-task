@@ -1,7 +1,13 @@
-#Dockerfile
-FROM python:3.7-slim
-RUN pip install flask
+FROM python:3.11-alpine
+
 WORKDIR /app
-COPY app.py /app/app.py
-ENTRYPOINT ["python"]
-CMD ["/app/app.py"]
+
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+EXPOSE 8080
+
+CMD [ "python3", "main.py" ]
