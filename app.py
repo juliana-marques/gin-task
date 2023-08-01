@@ -5,7 +5,7 @@ import random
 
 app = Flask(__name__)
 
-@app.route('/imagem', methods=['GET'])
+@app.route('/', methods=['GET'])
 def exibir_imagem():
     search_query = 'gato programando'
 
